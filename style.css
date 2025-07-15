@@ -1,18 +1,16 @@
+/* === Styles globaux === */
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fafa;
   color: #222;
   animation: bodyFadeIn 1s ease-in-out forwards;
 }
 
 @keyframes bodyFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 header {
@@ -25,12 +23,8 @@ header {
 }
 
 @keyframes floatHeader {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(5px);
-  }
+  from { transform: translateY(0px); }
+  to { transform: translateY(5px); }
 }
 
 .photo {
@@ -94,20 +88,13 @@ footer {
   animation: fadeIn 2s ease forwards;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 30px;
-  color: #0a192f;
-  animation: fadeInTitle 1.5s ease-in-out forwards;
-}
+/* === Galerie photos === */
 
-/* Galerie animée */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .photo-card {
@@ -118,6 +105,7 @@ footer {
   animation: floatUp 1.5s ease forwards;
   opacity: 0;
   animation-delay: calc(0.2s * var(--i));
+  background-color: white;
 }
 
 .photo-card:hover {
@@ -128,15 +116,14 @@ footer {
 .photo-card img {
   width: 100%;
   height: 200px;
-  object-fit: contain; /* adapte mais laisse du vide autour */
-  background-color: #eee; /* pour remplir l’espace vide si besoin */
+  object-fit: contain; /* conserve les proportions, laisse du vide si besoin */
+  background-color: #eee; /* fond neutre pour espaces vides */
   border-radius: 10px;
   animation: subtleFloat 5s ease-in-out infinite alternate;
 }
 
-}
+/* === Animations utiles === */
 
-/* Utilitaires animation */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s forwards;
@@ -148,25 +135,11 @@ footer {
   animation: fadeInUp 1s forwards;
 }
 
-/* Keyframes */
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
@@ -186,7 +159,7 @@ footer {
 
 @keyframes subtleFloat {
   from {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   to {
     transform: translateY(-10px);

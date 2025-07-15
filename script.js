@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const photoPage = document.body.classList.contains("photo-page");
 
-  // ✅ Si on est sur la page des photos
   if (photoPage) {
     const imageNames = [
       "photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg",
@@ -25,4 +24,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
