@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.setProperty('--i', index); // Pour animation avec délai
 
       const img = document.createElement("img");
-      img.src = `images/${name}`;
+      img.src = `image/${name}`;
       img.alt = `Photo ${index + 1}`;
       img.loading = "lazy";
 
